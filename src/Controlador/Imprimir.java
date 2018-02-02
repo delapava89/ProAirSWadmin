@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Modelo;
+package Controlador;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -18,12 +18,12 @@ import java.awt.Toolkit;
  */
 public class Imprimir {
 
-    Font fuente = new Font("Dialog", Font.PLAIN, 10);
+    Font fuente = new Font("Arial", Font.PLAIN, 12);
     PrintJob pj;
     Graphics pagina;
 
-    public Imprimir() {
-        pj = Toolkit.getDefaultToolkit().getPrintJob(new Frame(), "SCAT", null);
+    public Imprimir(String nombreArchivo) {
+        pj = Toolkit.getDefaultToolkit().getPrintJob(new Frame(), "Factura "+nombreArchivo, null);
     }
 
     public void imprimir(String Cadena) {

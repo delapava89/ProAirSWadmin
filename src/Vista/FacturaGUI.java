@@ -8,7 +8,7 @@ package Vista;
 import Controlador.GestionCliente;
 import Controlador.GestionFactura;
 import Modelo.Cliente;
-import Modelo.Imprimir;
+import Controlador.Imprimir;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JOptionPane;
@@ -550,6 +550,9 @@ public class FacturaGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        
+        Imprimir i = new Imprimir("Sapito");
+        i.imprimir("txt");
         // TODO add your handling code here:
         
     }//GEN-LAST:event_jButton3ActionPerformed

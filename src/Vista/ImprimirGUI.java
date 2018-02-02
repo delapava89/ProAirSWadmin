@@ -5,7 +5,7 @@
  */
 package Vista;
 
-import Modelo.Imprimir;
+import Controlador.Imprimir;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
@@ -61,7 +61,7 @@ public class ImprimirGUI extends JFrame {
     private void imprimirFactura(){
         texto = String.valueOf(txtCampo.getText());
             if (!texto.equals("")) {
-                imp = new Imprimir();
+                imp = new Imprimir("Sapo");
                 imp.imprimir(texto);
             } else {
                 System.out.println("NO SE IMPRIME NADA EN BLANCO...");
